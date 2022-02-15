@@ -8,30 +8,30 @@ import (
 var reverse bool
 var sortBy string
 
-type ByYear []Tent
+type byYear []Tent
 
-func (w ByYear) Len() int {
+func (w byYear) Len() int {
 	return len(w)
 }
 
-func (w ByYear) Less(i, j int) bool {
+func (w byYear) Less(i, j int) bool {
 	if reverse {
 		return w[i].Year > w[j].Year
 	}
 	return w[i].Year < w[j].Year
 }
 
-func (w ByYear) Swap(i, j int) {
+func (w byYear) Swap(i, j int) {
 	w[i], w[j] = w[j], w[i]
 }
 
-type ByName []Tent
+type byName []Tent
 
-func (w ByName) Len() int {
+func (w byName) Len() int {
 	return len(w)
 }
 
-func (w ByName) Less(i, j int) bool {
+func (w byName) Less(i, j int) bool {
 	iname := strings.Split(w[i].Name, " ")
 	jname := strings.Split(w[j].Name, " ")
 	iindex := 0
@@ -46,16 +46,16 @@ func (w ByName) Less(i, j int) bool {
 	return iname[iindex] < jname[jindex]
 }
 
-func (w ByName) Swap(i, j int) {
+func (w byName) Swap(i, j int) {
 	w[i], w[j] = w[j], w[i]
 }
 
 func sortWinners(w Tents) Tents {
 	switch sortBy {
 	case "firstname", "lastname":
-		sort.Sort(ByName(w.Tents))
+		sort.Sort(byName(w.Tents))
 	case "year":
-		sort.Sort(ByYear(w.Tents))
+		sort.Sort(byYear(w.Tents))
 	}
 
 	return w

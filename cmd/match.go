@@ -2,18 +2,18 @@ package cmd
 
 import "strings"
 
-type MatchInterface interface {
-	Match(string, string) bool
+type matchInterface interface {
+	match(string, string) bool
 }
 
-type MatchExact struct{}
+type matchExact struct{}
 
-func (me *MatchExact) Match(s1 string, s2 string) bool {
+func (me *matchExact) match(s1 string, s2 string) bool {
 	return strings.EqualFold(s1, s2)
 }
 
-type MatchAnywhere struct{}
+type matchAnywhere struct{}
 
-func (ma *MatchAnywhere) Match(s string, substr string) bool {
+func (ma *matchAnywhere) match(s string, substr string) bool {
 	return strings.Contains(strings.ToLower(s), strings.ToLower(substr))
 }

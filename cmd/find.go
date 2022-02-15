@@ -18,22 +18,22 @@ func getConsoleTent(search string) (*Tent, error) {
 	return nil, fmt.Errorf("hmmm can't find %q, perhaps try mumbling and see who responds?", search)
 }
 
-func findConsoleTents(search string, cts Tents, match MatchInterface) ([]Tent, error) {
+func findConsoleTents(search string, cts Tents, match matchInterface) ([]Tent, error) {
 	// set default match
 	if match == nil {
-		match = &MatchExact{}
+		match = &matchExact{}
 	}
 
 	var ftw []Tent
 	for _, v := range cts.Tents {
 		names := strings.Split(v.Name, " ")
 		for _, n := range names {
-			if match.Match(n, search) {
+			if match.match(n, search) {
 				v.foundName = true
 				ftw = append(ftw, v)
 			}
 		}
-		if match.Match(v.Year, search) {
+		if match.match(v.Year, search) {
 			ftw = append(ftw, v)
 		}
 	}
