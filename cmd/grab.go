@@ -41,9 +41,9 @@ var grabCmd = &cobra.Command{
 			return
 		}
 		if inatent {
-			printWinnerInTent(*w)
+			printConsoleTentInTent(*w)
 		} else {
-			printWinner(*w, w.foundName)
+			printConsoleTent(*w, w.foundName)
 		}
 	},
 }

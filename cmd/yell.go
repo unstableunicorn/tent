@@ -57,7 +57,7 @@ tent yell --reverse
 tent yell --sort lastname`,
 	Run: func(cmd *cobra.Command, args []string) {
 		winners := sortWinners(theConsoleTents)
-		printWinners(winners.Tents)
+		printAllConsoleTents(winners.Tents)
 	},
 }
 

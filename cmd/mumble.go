@@ -41,7 +41,7 @@ tent mumble 201`,
 			fmt.Printf("welp: %v\n", err)
 			return
 		}
-		printWinners(winners)
+		printAllConsoleTents(winners)
 	},
 }
 

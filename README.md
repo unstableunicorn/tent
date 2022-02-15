@@ -1,5 +1,7 @@
+[![Go](https://github.com/unstableunicorn/tent/actions/workflows/go.yml/badge.svg)](https://github.com/unstableunicorn/tent/actions/workflows/go.yml)
+
 # Tent
-Tent is a cli utility for printing the Nova Console Tent(get it? consultant but for the tech nerds) of the year
+Tent is a cli utility for printing the Nova Console Tent(like consultant...well i find it funny...nvm) but prints a tent in your console with the name of searched winner.
 This is a totally very silly pointless project for a bit of fun.
 
 ## Installation
@@ -47,4 +49,6 @@ Flags:
 Use "tent [command] --help" for more information about a command.
 ```
 
+## Releases
+Using atlassians []()
 Lets leave it there for now

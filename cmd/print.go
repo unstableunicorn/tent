@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-func printWinner(w Tent, showYear bool) {
+func printConsoleTent(w Tent, showYear bool) {
 	if showYear {
 		fmt.Printf("%v - %v\n", w.Year, w.Name)
 	} else {
@@ -14,7 +14,7 @@ func printWinner(w Tent, showYear bool) {
 	}
 }
 
-func printWinnerInTent(w Tent) {
+func printConsoleTentInTent(w Tent) {
 	for i := 0; i < len(w.Year); i++ {
 		asciitent[i] = byte(w.Year[i])
 	}
@@ -25,23 +25,13 @@ func printWinnerInTent(w Tent) {
 	fmt.Println(string(asciitent))
 }
 
-func printWinnerByName(w Tent) {
-	names := strings.Split(w.Name, " ")
-
-	if sortBy == "lastname" {
-		fmt.Printf("%v, %v - %v\n", names[1], names[0], w.Year)
-	} else {
-		fmt.Printf("%v, %v - %v\n", names[0], names[1], w.Year)
-	}
-}
-
-func printWinners(ftw []Tent) {
+func printAllConsoleTents(ftw []Tent) {
 	// handle if only 1 found and you want them in a tent
 	if inatent {
 		if len(ftw) > 1 {
 			fmt.Println("too many for the pretty tent, ignoring 'inthetent' ")
 		} else {
-			printWinnerInTent(ftw[0])
+			printConsoleTentInTent(ftw[0])
 			return
 		}
 	}
@@ -49,9 +39,15 @@ func printWinners(ftw []Tent) {
 	for _, w := range ftw {
 		switch sortBy {
 		case "firstname", "lastname":
-			printWinnerByName(w)
+			names := strings.Split(w.Name, " ")
+
+			if sortBy == "lastname" {
+				fmt.Printf("%v, %v - %v\n", names[1], names[0], w.Year)
+			} else {
+				fmt.Printf("%v, %v - %v\n", names[0], names[1], w.Year)
+			}
 		case "year":
-			printWinner(w, true)
+			printConsoleTent(w, true)
 		}
 	}
 }
