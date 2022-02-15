@@ -1,0 +1,68 @@
+{
+    "tents": [
+        {
+            "year": "2007",
+            "name": "Rob Starbuck"
+        },
+        {
+            "year": "2008",
+            "name": "Bill Bunton"
+        },
+        {
+            "year": "2009",
+            "name": "Phil Krix"
+        },
+        {
+            "year": "2006",
+            "name": "Phil Phil"
+        },
+        {
+            "year": "2010",
+            "name": "Anthony Coleman"
+        },
+        {
+            "year": "2011",
+            "name": "Forbes Peters"
+        },
+        {
+            "year": "2012",
+            "name": "David Ostler"
+        },
+        {
+            "year": "2013",
+            "name": "Sean Leyden"
+        },
+        {
+            "year": "2014",
+            "name": "Margot Schelling"
+        },
+        {
+            "year": "2015",
+            "name": "Andy Bull"
+        },
+        {
+            "year": "2016",
+            "name": "Jon Sciortino"
+        },
+        {
+            "year": "2017",
+            "name": "Dave Strangward"
+        },
+        {
+            "year": "2018",
+            "name": "Shane Hemmens"
+        },
+        {
+            "year": "2019",
+            "name": "Tim Grabert"
+        },
+        {
+            "year": "2020",
+            "name": "Ben Marsh"
+        },
+        {
+            "year": "2021",
+            "name": "Brendan Jurd"
+        }
+    ]
+}
