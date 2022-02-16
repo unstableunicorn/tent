@@ -26,9 +26,9 @@ Alternatively you can use the Docker images, cause why not:
 ```
 docker run --rm unstableunicorn/tent
 ```
-Or install as a go module like this:
+Or install from the go module like this:
 ```
-go install github.com/unstableunicorn/tent
+go install github.com/unstableunicorn/tent@latest
 ```
 
 Without any arguments it will print the help and exit.

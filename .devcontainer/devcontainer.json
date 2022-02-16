@@ -34,7 +34,7 @@
 	"workspaceFolder": "/workspaces/src/github.com/unstableunicorn/${localWorkspaceFolderBasename}",
 	"remoteEnv": {
 		"GOPATH": "/workspaces",
-		"PATH": "${containerEnv:PATH}:/workspaces/src/github.com/unstableunicorn/${localWorkspaceFolderBasename}/bin:/src/bin",
+		"PATH": "${containerEnv:PATH}:/workspaces/src/github.com/unstableunicorn/${localWorkspaceFolderBasename}/bin:/workspaces/bin",
 	},
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
