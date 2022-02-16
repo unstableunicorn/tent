@@ -1,7 +1,6 @@
 OUT := tent
-# PKG := github.com/unstableunicorn/tent
-PKG := .
-VERSION := $(shell git describe --always --long --dirty)
+PKG := github.com/unstableunicorn/tent
+VERSION ?= $(shell git describe --always --long --dirty)
 VERSION_PATH := github.com/unstableunicorn/tent/cmd.version
 PKG_LIST := $(shell go list ${PKG}/... | grep -v /vendor/)
 GO_FILES := $(shell find . -name '*.go' | grep -v /vendor/)
@@ -30,12 +29,12 @@ lint:
 	staticcheck ./...
 
 static: vet lint
-	go build -v -o bin/${OUT}-v${VERSION} -tags netgo -ldflags="-extldflags \"-static\" -w -s -X cmd.version=${VERSION}" ${PKG}
+	go build -v -o bin/${OUT}-${VERSION} -tags netgo -ldflags="-extldflags \"-static\" -w -s -X ${VERSION_PATH}=${VERSION}" ${PKG}
 
 run: buildlocal
-	./${OUT}
+	./bin/${OUT}
 
 clean:
-	-@rm ${OUT} ${OUT}-v*
+	-@rm ./bin/${OUT}*
 
 .PHONY: run server static vet lint

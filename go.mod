@@ -1,4 +1,4 @@
-module github.com/tent
+module github.com/unstableunicorn/tent
 
 go 1.17
 

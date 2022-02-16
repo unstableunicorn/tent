@@ -1,11 +1,11 @@
 /*
-Copyright © 2022 NAME HERE <EMAIL ADDRESS>
+Copyright © 2022 Elric Hindy <anunstableunicorn@gmail.com>
 
 */
 package main
 
 import (
-	"github.com/tent/cmd"
+	"github.com/unstableunicorn/tent/cmd"
 )
 
 func main() {
