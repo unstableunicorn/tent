@@ -31,6 +31,7 @@ func findConsoleTents(search string, cts Tents, match matchInterface) ([]Tent, e
 			if match.match(n, search) {
 				v.foundName = true
 				ftw = append(ftw, v)
+				break
 			}
 		}
 		if match.match(v.Year, search) {
