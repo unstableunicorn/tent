@@ -12,13 +12,13 @@ Available architectures are `linux|darwin|windows`:
 curl -L https://github.com/unstableunicorn/tent/releases/download/<version>/tent-<architecture>-amd64 -o <binary output path>
 
 # Windows
-curl -L https://github.com/unstableunicorn/tent/releases/download/v0.1.3/tent-windows-amd64 -o tent.exe
+curl -L https://github.com/unstableunicorn/tent/releases/download/v0.1.4/tent-windows-amd64 -o tent.exe
 
 # Darwin
-curl -L https://github.com/unstableunicorn/tent/releases/download/v0.1.3/tent-darwin-amd64 -o tent
+curl -L https://github.com/unstableunicorn/tent/releases/download/v0.1.4/tent-darwin-amd64 -o tent
 
 # Linux
-curl -L https://github.com/unstableunicorn/tent/releases/download/v0.1.3/tent-linux-amd64 -o tent
+curl -L https://github.com/unstableunicorn/tent/releases/download/v0.1.4/tent-linux-amd64 -o tent
 ```
 Copy to your PATH and run it anywhere!
 
