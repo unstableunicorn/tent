@@ -38,6 +38,10 @@ This will fill your desire.
 This will print a tent in your console`,
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println(string(asciitent))
+		if inatent {
+			fmt.Println("I hear you, you want more tent, so here you go:")
+			fmt.Println(string(asciitent))
+		}
 	},
 }
 

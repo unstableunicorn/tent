@@ -95,7 +95,7 @@ func Execute(defCmd string) {
 			}
 		}
 	}
-	if !cmdFound && !isHelpCommand(os.Args[1:]) && !(os.Args[1] == "completion") {
+	if !cmdFound && !isRootCommand(os.Args[1:]) {
 		args := append([]string{defCmd}, os.Args[1:]...)
 		rootCmd.SetArgs(args)
 	}
@@ -106,11 +106,26 @@ func Execute(defCmd string) {
 	}
 }
 
-func isHelpCommand(cmds []string) bool {
+func isRootCommand(cmds []string) bool {
+	excludedCommands := []string{
+		"help",
+		"-h",
+		"--help",
+		"-v",
+		"--version",
+		"completion",
+	}
+
 	if len(cmds) == 0 {
 		return true
 	}
-	return cmds[0] == "help" || cmds[0] == "-h" || cmds[0] == "--help"
+
+	for _, v := range excludedCommands {
+		if v == cmds[0] {
+			return true
+		}
+	}
+	return false
 }
 
 func init() {
