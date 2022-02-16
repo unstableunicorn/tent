@@ -62,6 +62,4 @@ Flags:
 Use "tent [command] --help" for more information about a command.
 ```
 
-## Releases
-Using atlassians []()
 Lets leave it there for now
