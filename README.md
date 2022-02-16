@@ -5,20 +5,33 @@ Tent is a cli utility for printing the Nova Console Tent(like consultant...well 
 This is a totally very silly pointless project for a bit of fun.
 
 ## Installation
-I'll do the whole release thing soon but hopefully you just curl your version:
+You can download from the releases: [latest releases](https://github.com/unstableunicorn/tent/releases/latest) or curl your version and architecture:
+Available architectures are `linux|darwin|windows`:
 ```
-curl TODO
-```
+# Basic:
+curl -L https://github.com/unstableunicorn/tent/releases/download/<version>/tent-<architecture>-amd64 -o <binary output path>
 
-Alternatively you can use the Docker images now:
+# Windows
+curl -L https://github.com/unstableunicorn/tent/releases/download/v0.1.0/tent-windows-amd64 -o tent.exe
+
+# Darwin
+curl -L https://github.com/unstableunicorn/tent/releases/download/v0.1.0/tent-darwin-amd64 -o tent
+
+# Linux
+curl -L https://github.com/unstableunicorn/tent/releases/download/v0.1.0/tent-linux-amd64 -o tent
 ```
-docker run --rm unstableunicorn/tent help
+Copy to your PATH and run it anywhere!
+
+Alternatively you can use the Docker images, cause why not:
 ```
+docker run --rm unstableunicorn/tent
+```
+Without any arguments it will print the help and exit.
 
 ## Usage
 Just play around a bit with help, will only list the base help here:
 ```
->tent help
+>tent
 So you want to know who the console tent was for a particular year?
 Perhaps you want to know which year someone was a console tent?
 Or you just want to print a tent in your console?
