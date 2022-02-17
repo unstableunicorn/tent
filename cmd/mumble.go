@@ -35,6 +35,7 @@ var mumbleCmd = &cobra.Command{
 	Long: `Find matches containing text and list them:
 e.g. to find all winners in the 2010's you could just type "201":
 tent mumble 201`,
+	Args: cobra.MinimumNArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {
 		winners, err := findConsoleTents(args[0], theConsoleTents, &matchAnywhere{})
 		if err != nil {
